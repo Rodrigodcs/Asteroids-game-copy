@@ -1,0 +1,58 @@
+.score {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+span {
+  margin-left: 4px;
+}
+
+.tutorial {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+  color: white;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  width: 450px;
+  transition: 1s;
+}
+.final-score {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 5px solid rgb(58, 58, 58);
+  box-shadow: 0px 0px 5px rgb(179, 179, 179);
+  border-radius: 10px;
+  transition: 2s;
+}
+.opacity {
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
+}
