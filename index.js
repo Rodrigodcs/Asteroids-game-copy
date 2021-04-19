@@ -135,6 +135,8 @@ function animate(){
     enemy.update()
     const distanceFromPlayer = Math.hypot(player.x-enemy.x,player.y-enemy.y)
     if(distanceFromPlayer-enemy.radius-player.radius<-1){
+      var snd = new Audio("gameover.wav");
+      snd.play();
       cancelAnimationFrame(animationId)
       document.querySelector(".top-score").innerHTML = score;
       document.querySelector(".final-score").classList.remove("hide")
@@ -149,12 +151,15 @@ function animate(){
         }
         if(enemy.radius-10>9){
           gsap.to(enemy,{radius:enemy.radius-10})
-          
+          var snd = new Audio("snare-finnish.wav");
+          snd.play();
           setTimeout(()=>{
             projectiles.splice(projectilesIndex,1)
             
         },0)
         }else{
+          var snd = new Audio("bombexplosion.wav");
+          snd.play();
           score+=100
           dificulty+=0.1
           setTimeout(()=>{
@@ -203,6 +208,8 @@ function spawnNewEnemy(){
 
 addEventListener("mousedown", shoot);
 function shoot(event){
+  var snd = new Audio("shoot02.wav");
+  snd.play();
   console.log(projectiles);
   const projectileAngle = Math.atan2(event.clientY-y,event.clientX-x)
   const velocity = {
