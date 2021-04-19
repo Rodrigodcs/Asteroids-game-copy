@@ -4,6 +4,9 @@ const c = canvas.getContext("2d")
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 setTimeout(begin,3000)
+function restartGame(){
+  window.location.reload()
+}
 function begin(){
   setTimeout(begin2,1000)
   document.querySelector(".tutorial").classList.add("opacity")
@@ -15,7 +18,7 @@ function begin2(){
 function final(){
   document.querySelector(".final-score").classList.remove("opacity")
 }
-let dificulty = 1;
+let dificulty = 10;
 class Player {
   constructor(x,y,radius,color){
     this.x=x;
