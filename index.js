@@ -18,7 +18,7 @@ function begin2(){
 function final(){
   document.querySelector(".final-score").classList.remove("opacity")
 }
-let dificulty = 10;
+let dificulty = 1;
 class Player {
   constructor(x,y,radius,color){
     this.x=x;
